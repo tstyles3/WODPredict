@@ -29,11 +29,11 @@ weighted_movements = sorted(set(weighted_movements))
 print("All Movements:", all_movements)
 print("Weighted Movements:", weighted_movements)
 
-# Save to JSON if needed
-output_data = {
-    "movements": all_movements,
-    "weighted_movements": weighted_movements
-}
+# # Save to JSON if needed
+# output_data = {
+#     "movements": all_movements,
+#     "weighted_movements": weighted_movements
+# }
 
-with open("movement_database_for_app.json", "w") as file:
-    json.dump(output_data, file, indent=4)
+# with open("movement_database_for_app.json", "w") as file:
+#     json.dump(output_data, file, indent=4)
