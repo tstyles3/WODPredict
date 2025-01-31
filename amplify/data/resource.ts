@@ -66,7 +66,8 @@ const schema = a.schema({
       weights: a.float().array(), // Weights per movement
       score: a.float(), // Score (e.g., total reps completed)
     })
-    .authorization((allow) => [allow.owner()]), // Restrict data access to the user
+    // .authorization((allow) => [allow.owner()]), // Restrict data access to the user
+    .authorization((allow) => [allow.publicApiKey()]),
 });
 
 export type Schema = ClientSchema<typeof schema>;
