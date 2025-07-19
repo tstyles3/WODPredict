@@ -1,5 +1,4 @@
 import { type ClientSchema, a, defineData } from "@aws-amplify/backend"
-// import { predictWorkoutScore } from "../functions/predict-workout-score/resource"
 
 const schema = a.schema({
   WorkoutData: a
@@ -31,25 +30,45 @@ const schema = a.schema({
     .model({
       id: a.id(), // Unique entry ID
       deadlift: a.integer(),
+      deadlift_timestamp: a.string(), // Timestamp for deadlift
       bench_press: a.integer(),
+      bench_press_timestamp: a.string(), // Timestamp for bench press
       back_squat: a.integer(),
+      back_squat_timestamp: a.string(), // Timestamp for back squat
       front_squat: a.integer(),
+      front_squat_timestamp: a.string(), // Timestamp for front squat
       squat_clean: a.integer(),
+      squat_clean_timestamp: a.string(), // Timestamp for squat clean
       power_clean: a.integer(),
+      power_clean_timestamp: a.string(), // Timestamp for power clean
       thruster: a.integer(),
+      thruster_timestamp: a.string(), // Timestamp for thruster
       clean_and_jerk: a.integer(),
+      clean_and_jerk_timestamp: a.string(), // Timestamp for clean and jerk
       squat_snatch: a.integer(),
+      squat_snatch_timestamp: a.string(), // Timestamp for squat snatch
       power_snatch: a.integer(),
+      power_snatch_timestamp: a.string(), // Timestamp for power snatch
       overhead_squat: a.integer(),
+      overhead_squat_timestamp: a.string(), // Timestamp for overhead squat
       strict_press: a.integer(),
+      strict_press_timestamp: a.string(), // Timestamp for strict press
       push_press: a.integer(),
+      push_press_timestamp: a.string(), // Timestamp for push press
       push_jerk: a.integer(),
+      push_jerk_timestamp: a.string(), // Timestamp for push jerk
       split_jerk: a.integer(),
+      split_jerk_timestamp: a.string(), // Timestamp for split jerk
       pull_ups: a.integer(),
+      pull_ups_timestamp: a.string(), // Timestamp for pull ups
       bar_muscle_ups: a.integer(),
+      bar_muscle_ups_timestamp: a.string(), // Timestamp for bar muscle ups
       ring_muscle_ups: a.integer(),
+      ring_muscle_ups_timestamp: a.string(), // Timestamp for ring muscle ups
       toes_to_bar: a.integer(),
+      toes_to_bar_timestamp: a.string(), // Timestamp for toes to bar
       double_unders: a.integer(),
+      double_unders_timestamp: a.string(), // Timestamp for double unders
     })
     .authorization((allow) => [allow.owner()]), // Restrict data access to the user
 })
