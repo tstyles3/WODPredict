@@ -79,7 +79,7 @@ export const data = defineData({
   schema,
   authorizationModes: {
     defaultAuthorizationMode: "userPool",
-    apiKeyAuthorizationMode: { expiresInDays: 30 }, // Ensure API key exists for public read
+    apiKeyAuthorizationMode: { expiresInDays: 365 }, // Extend to 1 year
   },
 })
 
